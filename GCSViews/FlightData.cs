@@ -1424,7 +1424,7 @@ namespace MissionPlanner.GCSViews
                     MainV2.comPort.MAV.cs.firmware == Firmwares.Ateryx ||
                     MainV2.comPort.MAV.cs.firmware == Firmwares.ArduRover ||
                     MainV2.comPort.MAV.cs.firmware == Firmwares.ArduCopter2)
-                    MainV2.comPort.setMode("Loiter");
+                    MainV2.comPort.setMode("Manual");
             }
             catch
             {
@@ -1439,7 +1439,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 ((Control) sender).Enabled = false;
-                MainV2.comPort.setMode("RTL");
+                MainV2.comPort.setMode("Stabilize");
             }
             catch
             {
